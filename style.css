@@ -1,5 +1,5 @@
 /* Google Font for Modern Look */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Organetto:wght@700&display=swap');
 
 /* Reset and Base Styling */
 * {
@@ -92,10 +92,12 @@ nav ul li a:hover {
 }
 
 .section h2 {
-    font-size: 2rem;
-    color: #0061f2;
-    font-weight: 800;
-    margin-bottom: 1rem;
+    font-family: 'Organetto', sans-serif; /* Apply Organetto font */
+    font-size: 3rem;
+    color: #000; /* Same color as 'About the Project' */
+    font-weight: 700;
+    margin-right: 1rem; /* Space between the text and the line */
+    text-align: left; /* Left-aligned heading */
 }
 
 .section p {
@@ -128,6 +130,11 @@ img {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove focus outline from images, links, buttons, and input fields */
+img:focus, a:focus, button:focus, input:focus {
+    outline: none;
 }
 
 /* Footer Section */
@@ -164,8 +171,163 @@ footer a:hover {
     .section {
         padding: 2rem;
     }
+
     #recipes img {
         width: 30%;
     }
-    
 }
+
+/* About Section Styling */
+.about-section h2 {
+    font-family: 'Organetto', sans-serif; /* Apply Organetto font */
+    font-size: 3rem;
+    color: #000;
+    font-weight: 700;
+    margin-right: 1rem; /* Space between the text and the line */
+    text-align: left; /* Left-aligned heading */
+}
+
+.heading-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.yellow-line {
+    flex-grow: 1; /* Makes the line stretch across the remaining space */
+    height: 5px;
+    background-color: #ffc107;
+    border-radius: 5px;
+}
+
+/* Same styling for other section headings */
+.section .heading-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section .yellow-line {
+    flex-grow: 1; /* Makes the line stretch across the remaining space */
+    height: 5px;
+    background-color: #ffc107;
+    border-radius: 5px;
+}
+
+/* Interactive Image Hover */
+.interactive-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust layout for interactive images to be next to each other */
+.interactive-images {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Space out images evenly */
+    gap: 1rem; /* Space between images */
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    justify-content: center; /* Center images on smaller screens */
+}
+
+.interactive-images img {
+    width: 30%; /* Adjust the width of each image to fit 3 images in a row */
+    max-width: 350px; /* Limit the maximum width of each image */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images */
+.interactive-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .interactive-images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center; /* Center the images */
+    }
+
+    .interactive-images img {
+        width: 80%; /* Reduce image width for smaller screens */
+        max-width: 280px; /* Limit the maximum width */
+    }
+}
+
+@font-face {
+    font-family: 'Organetto';
+    src: url('organetto-webfont.woff2') format('woff2'),
+         url('organetto-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+/* Add this to the existing CSS */
+
+.image-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.image-description img {
+    width: 80%; /* Adjust width as necessary */
+    max-width: 350px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-description .text-box {
+    background-color: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 350px; /* Same width as image */
+}
+
+.image-description .text-box p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.image-description img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .interactive-images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center; /* Center the images */
+    }
+
+    .interactive-images img {
+        width: 80%; /* Reduce image width for smaller screens */
+        max-width: 280px; /* Limit the maximum width */
+    }
+
+    .image-description .text-box {
+        width: 90%; /* Adjust text box width for smaller screens */
+    }
+}
+
+#recipes p {
+    color: white; /* Set text color to white */
+    font-size: 1.1rem; /* Adjust text size for readability */
+    margin-top: 0.5rem; /* Add some space between the image and text */
+    text-align: center; /* Center-align the text */
+}
+
+#resources p {
+    color: white; /* Set text color to white */
+    font-size: 1.1rem; /* Adjust text size for readability */
+    margin-top: 0.5rem; /* Add some space between the image and text */
+    text-align: center; /* Center-align the text */
+}
+
