@@ -9,11 +9,13 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Clean and modern font */
+    font-family: 'Poppins', sans-serif; /* Clean and modern font */
     color: #333; /* Neutral, professional text color */
     background-color: #f9f9f9; /* Light, soft background for contrast */
     line-height: 1.6;
     scroll-behavior: smooth; /* Enable smooth scrolling */
+    margin: 0; /* Ensure no default margin */
+    padding-top: 140px; /* Adds space at the top for the header (adjust based on your header height) */
 }
 
 .container {
@@ -22,29 +24,60 @@ body {
     margin: auto;
     padding: 2rem 0;
 }
-
-/* Header Section */
+/* Header styles */
 header {
-    background: linear-gradient(90deg, #0061f2, #00bdf2); /* Gradient for modern look */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #333333, #B0B0B0); /* Dark grey to light grey */
+
     color: #fff;
-    padding: 2rem 0;
+    padding: 1rem 0;
     text-align: center;
-    border-bottom: 3px solid #0056b3;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: top 0.3s ease-in-out, opacity 0.5s ease;
+}
+
+header.hidden {
+    top: -100px; /* Moves the header out of view */
+    opacity: 0; /* Hides the header */
 }
 
 header h1 {
-    text-align: center; /* Centers the text horizontally */
-    margin: 0 auto;
-    color: #fff;
-    font-size: 3rem; /* Large, modern font size */
-    font-weight: 700; /* Bold but not overly heavy */
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
 }
 
-header p {
+header nav {
     margin-top: 0.5rem;
-    font-size: 1.2rem;
-    opacity: 0.9;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* Optional: Hover effects for the links */
+header nav ul li a:hover {
+    color: #ffcb00;
+}
+
+/* Optional: Hover effects for the links */
+header nav ul li a:hover {
+    color: #ffcb00;
 }
 
 /* Navigation Menu */
@@ -331,3 +364,167 @@ footer a:hover {
     text-align: center; /* Center-align the text */
 }
 
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and font styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Information Section Styling */
+#info {
+    padding: 2rem 0;
+    background-color: #ffffff;
+}
+
+#info .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#info p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Challenges Section */
+#info .text-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#info .text-box h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+#info .text-box ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#info .text-box li {
+    margin-bottom: 0.8rem;
+}
+
+#info .text-box li strong {
+    font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #info {
+        padding: 1.5rem 0;
+    }
+
+    #info h2 {
+        font-size: 1.6rem;
+    }
+
+    #info h3 {
+        font-size: 1.4rem;
+    }
+
+    #info h4 {
+        font-size: 1.1rem;
+    }
+}
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
