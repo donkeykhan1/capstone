@@ -1,0 +1,530 @@
+/* Google Font for Modern Look */
+@import url('https://fonts.googleapis.com/css2?family=Organetto:wght@700&display=swap');
+
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Clean and modern font */
+    color: #333; /* Neutral, professional text color */
+    background-color: #f9f9f9; /* Light, soft background for contrast */
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    margin: 0; /* Ensure no default margin */
+    padding-top: 140px; /* Adds space at the top for the header (adjust based on your header height) */
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 0;
+}
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #333333, #B0B0B0); /* Dark grey to light grey */
+
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out, opacity 0.5s ease;
+}
+
+header.hidden {
+    top: -100px; /* Moves the header out of view */
+    opacity: 0; /* Hides the header */
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+header nav {
+    margin-top: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* Optional: Hover effects for the links */
+header nav ul li a:hover {
+    color: #ffcb00;
+}
+
+/* Optional: Hover effects for the links */
+header nav ul li a:hover {
+    color: #ffcb00;
+}
+
+/* Navigation Menu */
+nav {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #0061f2;
+    border: 2px solid #0061f2;
+}
+
+/* Section Styling */
+.section {
+    background: #fff;
+    padding: 3rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.section h2 {
+    font-family: 'Organetto', sans-serif; /* Apply Organetto font */
+    font-size: 3rem;
+    color: #000; /* Same color as 'About the Project' */
+    font-weight: 700;
+    margin-right: 1rem; /* Space between the text and the line */
+    text-align: left; /* Left-aligned heading */
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.section a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0061f2;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.2s ease-in-out;
+}
+
+.section a:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+}
+
+/* Image Styles */
+img {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove focus outline from images, links, buttons, and input fields */
+img:focus, a:focus, button:focus, input:focus {
+    outline: none;
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #00bdf2;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .section {
+        padding: 2rem;
+    }
+
+    #recipes img {
+        width: 30%;
+    }
+}
+
+/* About Section Styling */
+.about-section h2 {
+    font-family: 'Organetto', sans-serif; /* Apply Organetto font */
+    font-size: 3rem;
+    color: #000;
+    font-weight: 700;
+    margin-right: 1rem; /* Space between the text and the line */
+    text-align: left; /* Left-aligned heading */
+}
+
+.heading-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.yellow-line {
+    flex-grow: 1; /* Makes the line stretch across the remaining space */
+    height: 5px;
+    background-color: #ffc107;
+    border-radius: 5px;
+}
+
+/* Same styling for other section headings */
+.section .heading-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section .yellow-line {
+    flex-grow: 1; /* Makes the line stretch across the remaining space */
+    height: 5px;
+    background-color: #ffc107;
+    border-radius: 5px;
+}
+
+/* Interactive Image Hover */
+.interactive-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust layout for interactive images to be next to each other */
+.interactive-images {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Space out images evenly */
+    gap: 1rem; /* Space between images */
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    justify-content: center; /* Center images on smaller screens */
+}
+
+.interactive-images img {
+    width: 30%; /* Adjust the width of each image to fit 3 images in a row */
+    max-width: 350px; /* Limit the maximum width of each image */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images */
+.interactive-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .interactive-images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center; /* Center the images */
+    }
+
+    .interactive-images img {
+        width: 80%; /* Reduce image width for smaller screens */
+        max-width: 280px; /* Limit the maximum width */
+    }
+}
+
+@font-face {
+    font-family: 'Organetto';
+    src: url('organetto-webfont.woff2') format('woff2'),
+         url('organetto-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+/* Add this to the existing CSS */
+
+.image-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.image-description img {
+    width: 80%; /* Adjust width as necessary */
+    max-width: 350px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-description .text-box {
+    background-color: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 350px; /* Same width as image */
+}
+
+.image-description .text-box p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.image-description img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .interactive-images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center; /* Center the images */
+    }
+
+    .interactive-images img {
+        width: 80%; /* Reduce image width for smaller screens */
+        max-width: 280px; /* Limit the maximum width */
+    }
+
+    .image-description .text-box {
+        width: 90%; /* Adjust text box width for smaller screens */
+    }
+}
+
+#recipes p {
+    color: white; /* Set text color to white */
+    font-size: 1.1rem; /* Adjust text size for readability */
+    margin-top: 0.5rem; /* Add some space between the image and text */
+    text-align: center; /* Center-align the text */
+}
+
+#resources p {
+    color: white; /* Set text color to white */
+    font-size: 1.1rem; /* Adjust text size for readability */
+    margin-top: 0.5rem; /* Add some space between the image and text */
+    text-align: center; /* Center-align the text */
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and font styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Information Section Styling */
+#info {
+    padding: 2rem 0;
+    background-color: #ffffff;
+}
+
+#info .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#info p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Challenges Section */
+#info .text-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#info .text-box h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+#info .text-box ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#info .text-box li {
+    margin-bottom: 0.8rem;
+}
+
+#info .text-box li strong {
+    font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #info {
+        padding: 1.5rem 0;
+    }
+
+    #info h2 {
+        font-size: 1.6rem;
+    }
+
+    #info h3 {
+        font-size: 1.4rem;
+    }
+
+    #info h4 {
+        font-size: 1.1rem;
+    }
+}
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
