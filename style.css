@@ -528,3 +528,13 @@ iframe {
     max-width: 560px;
     height: 315px;
 }
+.no-wrap {
+    white-space: nowrap;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+}
