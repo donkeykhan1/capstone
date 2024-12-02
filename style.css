@@ -537,4 +537,30 @@ iframe {
     height: auto;
     display: block;
     margin: 1em auto;
+
+
+}
+
+#resources .interactive-images {
+    margin-top: 40px; /* Push down images and links */
+}
+
+.resource-item {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px; /* Space between images */
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: black; /* Dark text color for contrast */
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(119, 75, 75, 0.7); /* Dark background for better contrast */
+    padding: 10px; /* Add padding around text */
+    text-align: center;
+    border-radius: 5px; /* Optional: rounded corners for better appearance */
 }
