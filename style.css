@@ -564,3 +564,41 @@ iframe {
     text-align: center;
     border-radius: 5px; /* Optional: rounded corners for better appearance */
 }
+.horizontal-list {
+    list-style: none;
+    padding: 0;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.list-item img {
+    max-width: 300px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.list-item p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+.list-item-row {
+    display: flex;
+    gap: 20px; /* Adds spacing between the two items */
+}
+
+.list-item-row .list-item {
+    flex: 1; /* Ensures equal width for each item */
+}
+
+.list-item-row .list-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
